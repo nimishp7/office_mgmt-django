@@ -15,10 +15,41 @@
         
      
     <h1>Employee Management system</h1><hr>
-    <a class="btn btn-primary" href="/all_emp.html" role="button">View all employee</a>
-    <a class="btn btn-primary" href="/add_emp.html" role="button">Add an employee</a>
-    <a class="btn btn-primary" href="/remove_emp.html" role="button">Remove an employee</a>
-    <a class="btn btn-primary" href="/filter_emp.html" role="button">Filter an employee</a>
+    <a class="btn btn-primary" href="/all_emp/" role="button">View all employee</a>
+    <a class="btn btn-primary" href="/add_emp/" role="button">Add an employee</a>
+    <a class="btn btn-primary" href="/remove_emp/" role="button">Remove an employee</a>
+    <a class="btn btn-primary" href="/filter_emp/" role="button">Filter an employee</a>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Bonus</th>
+          <th scope="col">Phone number</th>
+          <th scope="col">Depatment</th>
+          <th scope="col">Hiredate</th>
+        </tr>
+      </thead>
+          {% for emp in emps %}
+      <tbody>
+        <tr>
+          <th scope="row">{{emp.id}}</th>
+          <td>{{emp.fname}}</td>
+          <td>{{emp.lname}}</td>
+          <td>{{emp.salary}}</td>
+          <td>{{emp.bonus}}</td>
+          <td>{{emp.phone}}</td>
+          <td>{{emp.Role.name}}</td>
+          <td>{{emp.Deppartment.name}}</td>
+          <td>{{emp.Department.location}}</td>
+          <td>{{emp.hiredate}}</td>
+        </tr>
+      </tbody>
+          {% endfor  %}
+    </table>
 
 
 </div>

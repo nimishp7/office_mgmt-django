@@ -16,6 +16,38 @@
      
     <h1> see all employee</h1>
 
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Bonus</th>
+          <th scope="col">Phone number</th>
+          <th scope="col">Depatment</th>
+          <th scope="col">Hiredate</th>
+        </tr>
+      </thead>
+          {% for emp in emps %}
+      <tbody>
+        <tr>
+          <th scope="row">{{emp.id}}</th>
+          <td>{{emp.fname}}</td>
+          <td>{{emp.lname}}</td>
+          <td>{{emp.salary}}</td>
+          <td>{{emp.bonus}}</td>
+          <td>{{emp.phone}}</td>
+          <td>{{emp.Role.name}}</td>
+          <td>{{emp.Deppartment.name}}</td>
+          <td>{{emp.Department.location}}</td>
+          <td>{{emp.hiredate}}</td>
+        </tr>
+      </tbody>
+          {% endfor  %}
+    </table>
+
+
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
